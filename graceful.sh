@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-kill -HUP `cat $(cd $(dirname $0) ; pwd)/pidfile`
+cd $(dirname $0)
+source ../venv/bin/activate
+kill -HUP `cat pidfile`
